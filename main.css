@@ -1,0 +1,394 @@
+*{
+  box-sizing: border-box;
+}
+
+/*====CSS RESET====*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*===Helper colors====*/
+
+ /*header {
+  background-color: rgba(255, 248, 53, .3);
+}
+
+section {
+  background-color: rgba(140, 96, 255, .3);
+}
+
+footer {
+  background-color: rgba(255, 0, 0, .3);
+}
+
+.middle-box {
+  background-color: rgba(255, 0, 0, .3);
+} */
+
+
+/* Single-direction margin declaration to establish vertical rhythm. */
+
+h1,h2,h3,
+ul,ol,
+p,
+img {
+    margin-bottom: 1.5rem;
+}
+
+body {
+  background: url('assets/wedding-landing-background.png') repeat center;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: #444349;
+}
+
+.location,
+.programs,
+.gifts,
+.faq,
+.contacts {
+  width: 95%;
+  margin: 1.5rem auto;
+  padding: .5rem 1rem;
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-family: 'Great Vibes', cursive;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: #bd806e;
+}
+
+a:hover {
+  color: #eda087;
+  transition: color .15s ease-in-out;
+}
+
+/*====Header====*/
+
+header {
+  height: 100vh;
+  width: 100vw;
+  background: url('assets/wedding-landing-cover.jpg') no-repeat 70% center/cover;
+  display: table;
+  text-align: center;
+}
+
+.middle-box-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.middle-box {
+  color: hsla(0,0%,100%,.9);
+  background: hsla(100,0%,0%,.5);
+  padding: .625rem;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #d2ba87;
+  margin-bottom: 0;
+  font-size: 3.15rem;
+}
+
+.headline {
+  font-size: 1.25rem;
+  letter-spacing: 0.15rem;
+}
+
+.headline::after {
+  display: block;
+  content:"";
+  background-color: #fff;
+  height: 1px;
+  width: 12.515625rem;
+  margin: .5rem auto;
+}
+
+.date::before,
+.date::after{
+  display: inline-block;
+  content: "";
+  background-color: #fff;
+  height: 1px;
+  width: 1.5rem;
+  vertical-align: middle;
+  margin: 0 .5rem;
+}
+
+/*====Header media queryk====*/
+
+@media (min-width:768px) {
+  .headline {
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width:768px) {
+  h1 {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .date {
+    font-size: 110%;
+    letter-spacing: .2rem;
+  }
+}
+
+@media (min-width:768px) {
+  .middle-box {
+    border-radius: 4px;
+    padding: 1.25rem;
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    background: url('assets/wedding-landing-cover.jpg') no-repeat center/cover;
+  }
+}
+
+/*====Locations====*/
+
+h3 {
+  font-weight: 700;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.location div {
+  font-family: 'Muli', sans-serif;
+  font-weight: 700;
+}
+
+.location-first-place::after,
+.location-second-place::after,
+.location-third-place::after{
+  display: block;
+  content:"";
+  background-color: #444349;
+  height: 3px;
+  width: 6rem;
+  margin: 1.5rem auto;
+}
+
+.rings,.camera, .cake {
+  height: 7.5rem;
+}
+
+/*====Locations media queryk====*/
+
+@media (min-width: 768px) {
+  .location-first-place,
+  .location-second-place,
+  .location-third-place {
+    display: inline-block;
+    width: 30%;
+    padding: 1.5rem;
+    margin: .5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .location-first-place::after,
+  .location-second-place::after,
+  .location-third-place::after {
+    display: none;
+  }
+}
+
+/*====Program=====*/
+
+.programs {
+  color: #d2ba87;
+  background: hsla(100,0%,0%,.6);
+  width: 100vw;
+}
+
+li {
+  text-align: left;
+  font-family: 'Muli', sans-serif;
+  font-weight: 700;
+  letter-spacing: .025rem;
+}
+
+.programs p {
+  font-family: 'Muli', sans-serif;
+  font-style: italic;
+  text-align: left;
+}
+
+.programs h2 {
+  margin-top: 1rem;
+}
+
+/*====Programs media queryk====*/
+
+@media (min-width: 768px) {
+  .program-wrapper {
+    width: 30vw;
+    margin: 0 auto;
+  }
+}
+
+/*====Gifst=====*/
+
+.gift {
+  height: 7.5rem;
+}
+
+.gifts p {
+   font-weight: 700
+}
+
+.gifts p:last-child {
+  margin-bottom: 0;
+}
+
+/*====Questions and Answers====*/
+
+.faq {
+  background: hsla(100,0%,0%,.6);
+  color: #d2ba87;
+  width: 100vw;
+}
+
+.faq p {
+  text-align: left;
+  font-family: 'Muli', sans-serif;
+}
+
+.questions {
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.question-group::after {
+  display: block;
+  content:"";
+  background-color: #d2ba87;
+  height: .1875rem;
+  width: 50vw;
+  margin: 1.5rem auto;
+}
+
+.faq h2 {
+  margin-top: 1rem;
+}
+
+.answers {
+  margin-bottom: 1.5rem;
+}
+
+/*====Questions and answers media queryk====*/
+
+@media (min-width: 768px) {
+  .question-group {
+    display: inline-block;
+    width: 30vw;
+    margin: 0 auto;
+    vertical-align: top;
+    padding: 1.5rem;
+    
+  }
+}
+
+@media (min-width: 768px) {
+  .question-group::after {
+    display:none;
+  }
+}
+
+@media (min-width: 768px) {
+  .question-group h3 {
+    text-align: left;
+  }
+}
+
+/*====Footer====*/
+
+footer {
+  background: #606060;
+  color: white;
+  font-size: .9rem;
+  font-family: 'Muli', sans-serif;
+  text-align: center;
+  width: 100vw;
+  height: 15vh;
+  display: table;
+}
+
+.footer {
+  display: table-cell;
+  vertical-align: middle;
+  padding: .625rem 1rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/*====Footer Media Queryk====*/
+
+@media (min-width:768px) {
+  .footer {
+    min-height: 7vh;
+  }
+}
